@@ -1,8 +1,13 @@
 //Khai báo sản phẩm
 
-var product1 = new Product("Áo Polo cao cấp màu nâu", 50000, 120000, "polo2.jpg");
-var product2 = new Product("Áo Polo cao cấp màu trắng", 200000, 250000, "img/2.jpg");
-arrProductAll = [product1,product2];
+var product1 = new Product("Áo Polo cao cấp màu nâu", 50000, 120000, "img/1.jpg");
+var product2 = new Product("Áo Polo cao cấp màu đen", 200000, 250000, "img/2.jpg");
+var product3 = new Product("Áo Polo cao cấp màu trắng", 200000, 250000, "img/3.jpg");
+var product4 = new Product("Áo Polo cao cấp màu trắng", 200000, 250000, "img/polo2.jpg");
+var product5 = new Product("Áo Polo cao cấp màu trắng", 200000, 250000, "img/polo2.jpg");
+var product6 = new Product("Áo Polo cao cấp màu trắng", 200000, 250000, "img/polo2.jpg");
+
+arrProductAll = [product1,product2,product3];
 
 display(arrProductAll)
 
@@ -13,7 +18,7 @@ function display (arrProduct) {
         data += `
         <div class="product-item">
          <div id="imgProduct">
-        <a href=""><img src="${arrProduct[i].img}" alt="" width="310px" height="280px"></a>
+        <a href=""><img src="${arrProduct[i].image}" alt="" width="310px" height="280px"></a>
          </div>
         </div>
         
