@@ -8,8 +8,7 @@ body{
 header{
     display: grid ;
     grid-template-columns: 25% 35% 10% 30%;
-    padding: 30px;
-    padding-left: 80px;
+    padding: 30px 30px 0px 80px ;
     background: #ffffff;
 }
 .logo{
@@ -35,7 +34,7 @@ header{
 #input-find {
     width: 598px;
     box-sizing: border-box;
-    border: 0px solid black;
+    border: 1px solid black;
     border-radius: 4px;
     outline:none;
     color: rgb(0, 0, 0);
@@ -50,7 +49,7 @@ header{
     color: black;
     background-color: #d9d9d9;
     margin-top: 20px;
-    margin-left: 100px;
+    margin-left: 110px;
 }
 #timkiem:hover{
     background-color: #38b6ff;
@@ -78,63 +77,30 @@ header{
 .main ul li a:hover {
     color: #B3B9ECFF;
 }
-main {
-    display: grid;
-    grid-template-columns: 17% 83%;
-    margin-left: 50px;
-    padding-top: 20px;
+.main-right{
+    margin: 0px 300px 300px 300px;
+
+
 }
-.menu ul li {
-    list-style: none;
-    padding-top: 35px;
-    padding-bottom: 25px;
+.product-sort{
+    margin-top: 20px;
+    margin-left: 20px;
 }
-.menu ul li a{
-    font-size: 20px;
-    text-decoration: none;
-    color: rgb(94, 92, 92);
+#sapxep-sanpham{
+    padding: 8px;
+    background: white;
+    color: green;
 }
-.left {
-    padding-top: 30px;
-    background-color: white;
-    height: 1250px;
+#themsp{
+    background-color: #240B8CFF;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    margin: 20px;
+    color:white;
 }
-.menu span{
-    color: #0073fe;
-    font-size: 22px ;
-    margin-left: 30px;
-    padding-bottom: 10px;
-    border-bottom: #86f8f6 solid thin;
-}
-.danhmuc{
-    font-size: 20px;
-    margin-left: 30px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-.menu{
-    font-size: 35px;
-    margin-left: 30px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-.right{
-    margin-left: 100px;
-}
-.title{
-    font-size: 30px;
-    padding-left: 20px;
-    padding-bottom: 20px;
-}
-.slideshow-container {
-    max-width: 1000px;
-    padding-left: 20px;
-}
-.Banner{
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
+#themsp:hover{
+    background: black;
+    color: green;
 }
 
