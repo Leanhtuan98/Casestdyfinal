@@ -82,12 +82,12 @@ header{
 
 
 }
-.product-sort{
-    margin-top: 20px;
-    margin-left: 20px;
-}
+/*.product-sort{*/
+/*    margin-top: 20px;*/
+/*    margin-left: 20px;*/
+/*}*/
 #sapxep-sanpham{
-    padding: 8px;
+    padding: 7px;
     background: white;
     color: green;
 }
@@ -103,4 +103,16 @@ header{
     background: black;
     color: green;
 }
+.product-item{
+    float: left;
+    padding: 5px 5px 5px 5px;
+    margin-left: 50px;
+    margin-top: 45px;
+    background: #ffffff;
+}
+#imgProduct{
+    text-align: center;
+
+}
+
 

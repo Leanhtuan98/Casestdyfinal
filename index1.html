@@ -13,7 +13,9 @@
     <div class="find">
         <input type="text" name="search" placeholder="Search..." id="input-find">
     </div>
-    <div><button type="button" id="timkiem" onclick="searchProduct()">Tìm</button></div>
+    <div>
+        <button type="button" id="timkiem" onclick="searchProduct()">Tìm</button>
+    </div>
     <div class="inPage">
         <button class="login">Đăng nhập</button>
         <button class="passWord">Mật Khẩu</button>
@@ -51,21 +53,21 @@
                 <img src="img/banner3.png" style="width:1030px" height="370px">
 
             </div>
-        <div class="product-sort">
-            <select id="sapxep-sanpham" onchange="sortProduct()">
-                <option value="1">Chọn sắp xếp</option>
-                <option id="high" value="high">Sắp xếp theo giá từ cao đến thấp</option>
-                <option id="low" value="low">Sắp xếp theo giá từ thấp đến cao</option>
-            </select>
+            <div class="product-sort">
+                <select id="sapxep-sanpham" onchange="sortProduct()">
+                    <option value="1">Chọn sắp xếp</option>
+                    <option id="high" value="high">Sắp xếp theo giá từ cao đến thấp</option>
+                    <option id="low" value="low">Sắp xếp theo giá từ thấp đến cao</option>
+                </select>
+            </div>
+            <div id="add">
+                <button id="themsp" onclick="addProductDisplay()">Thêm sản phẩm</button>
+            </div>
+            <div id="add-product"></div>
+
+            <div id="displayElement"></div>
+
         </div>
-    <div id="add">
-        <button id="themsp" onclick="addProductDisplay()">Thêm sản phẩm</button>
-    </div>
-    <div id="add-product"></div>
-
-    <div id="displayElement"></div>
-
-
     </div>
 </main>
 <script src="product.js"></script>
