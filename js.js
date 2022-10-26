@@ -1,4 +1,4 @@
-//Khai báo sản phẩm
+//Khai báo và hiển thị sản phẩm
 
 var product1 = new Product("Áo Polo nâu", 50000, 120000, "img/1.jpg");
 var product2 = new Product("Áo Polo đen", 200000, 250000, "img/2.jpg");
@@ -36,6 +36,88 @@ function display(arrProduct) {
        `
     }
     document.getElementById("displayElement").innerHTML = data;
+}
+
+// Thêm sản phẩm
+function addProductDisplay() {
+    let dataAdd = ""
+    dataAdd += `
+   <div class="input-add" >
+                    <input type="text" placeholder="Tên sản phẩm" id="input-name" ><br>
+                    <input type="text" placeholder="Giá" id="input-price" ><br>
+                    <input type="text" placeholder="Giá cũ" id="input-priceOld" ><br>
+                    <input type="text" placeholder="Image" id="input-image" ><br>
+                    <p id="check" style="color: red; padding: 15px 0px 0px 25px"></p>
+                    <input type="submit" value="Thêm" onclick="addProduct()" id="btn-addProduct">
+                     <input type="submit" value="Hủy" onclick="cancelAdd()" id="btn-cancel">
+                  
+                </div> 
+    `
+    document.getElementById("add-product").innerHTML = dataAdd;
+}
+
+function addProduct() {
+    let nameProduct = document.getElementById("input-name").value;
+    let imageProduct = document.getElementById("input-image").value;
+    let priceProduct = document.getElementById("input-price").value;
+    let priceOldProduct = +document.getElementById("input-priceOld").value;
+    let check = document.getElementById("check");
+    if (nameProduct == "" || imageProduct == "" || priceProduct == "" || priceOldProduct == "") {
+        check.innerHTML = "Không được để trống thông tin"
+    } else if (isNaN(priceProduct) || isNaN(priceOldProduct)) {
+        check.innerHTML = "Giá sản phẩm phải là số "
+    } else {
+        var product = new Product(nameProduct, priceProduct, priceOldProduct, imageProduct);
+        arrProductAll.push(product);
+        display(arrProductAll);
+        document.getElementById("add-product").innerHTML = ""
+    }
+}
+
+function cancelAdd() {
+    document.getElementById("add-product").innerHTML = ""
+}
+//Xóa sp
+function delProduct(index) {
+    if (confirm("Bạn có muốn xóa không?")) {
+        arrProductAll.splice(index, 1);
+        display(arrProductAll)
+    }
+}
+//Sửa sản phẩm
+function editProduct(index) {
+    let nameEdit = prompt("Nhập tên mới")
+    let priceEdit = +prompt("Nhập giá mới")
+    let priceOlEdit = +prompt("Nhập giá cũ")
+    let imageEdit = prompt("Nhập ảnh mới")
+    if (nameEdit == "" || priceEdit == "" || priceOlEdit == "" || imageEdit == "") {
+        alert("Không để trống thông tin")
+    } else if (isNaN(priceEdit) || isNaN(priceOlEdit)) {
+        alert("Giá sản phẩm là số")
+
+    } else {
+        arrProductAll[index].name = nameEdit
+        arrProductAll[index].price = priceEdit
+        arrProductAll[index].priceOld = priceOlEdit
+        arrProductAll[index].image = imageEdit
+
+        display(arrProductAll)
+    }
+}
+//Tìm sản phẩm
+function searchProduct() {
+    let inputSearch = document.getElementById("input-find").value;
+    let arrSearch = []
+    for (let i = 0 ; i<arrProductAll.length;i++){
+        if (inputSearch == arrProductAll[i].name){
+            arrSearch.push(arrProductAll[i])
+        }
+    }
+    display(arrSearch)
+    if (arrSearch.length == 0) {
+        alert("không tìm thấy sản phẩm")
+        display(arrProductAll)
+    }
 }
 
 

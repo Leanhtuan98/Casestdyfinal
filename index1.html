@@ -31,7 +31,7 @@
         <li><a href="">Liên hệ</a></li>
     </ul>
 </nav>
-<main>
+<main >
     <div class="main-right">
         <div class="title-listsp" style="color: black"><span>Danh Sách Sản Phẩm</span></div>
         <div class="slideshow-container">
@@ -53,15 +53,8 @@
                 <img src="img/banner3.png" style="width:1030px" height="370px">
 
             </div>
-            <div class="product-sort">
-                <select id="sapxep-sanpham" onchange="sortProduct()">
-                    <option value="1">Chọn sắp xếp</option>
-                    <option id="high" value="high">Sắp xếp theo giá từ cao đến thấp</option>
-                    <option id="low" value="low">Sắp xếp theo giá từ thấp đến cao</option>
-                </select>
-            </div>
             <div id="add">
-                <button id="themsp" onclick="addProductDisplay()">Thêm sản phẩm</button>
+                <button id="btn-add" onclick="addProductDisplay()">Thêm sản phẩm</button>
             </div>
             <div id="add-product"></div>
 
@@ -70,7 +63,20 @@
         </div>
     </div>
 </main>
+<footer>
+    <div class="infomation">
+        <nav class="lienhe">
+            <ul>
+                <div class="title-information"><span>FASHION</span></div>
+                <li> Số 35 Văn hội</li>
+                <li>Hotline : 123456789</li>
+                <li>Email: leanhtuan@gamil.com </li>
+                <li><a href=""><img src="img/logo.png"></a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+</body>
 <script src="product.js"></script>
 <script src="js.js"></script>
-</body>
 </html>

@@ -8,7 +8,8 @@ body{
 header{
     display: grid ;
     grid-template-columns: 25% 35% 10% 30%;
-    padding: 30px 30px 0px 80px ;
+    padding: 30px;
+    padding-left: 80px;
     background: #ffffff;
 }
 .logo{
@@ -82,26 +83,17 @@ header{
 
 
 }
-/*.product-sort{*/
-/*    margin-top: 20px;*/
-/*    margin-left: 20px;*/
-/*}*/
-#sapxep-sanpham{
-    padding: 7px;
-    background: white;
-    color: green;
-}
-#themsp{
-    background-color: #240B8CFF;
+#btn-add, #btn-addProduct, #btn-cancel{
+    background-color: black;
     border: none;
     padding: 10px;
     border-radius: 6px;
     margin: 20px;
     color:white;
 }
-#themsp:hover{
-    background: black;
-    color: green;
+#btn-add:hover, #btn-addProduct:hover, #btn-cancel:hover{
+    background: #240B8CFF;
+    /*color: green;*/
 }
 .product-item{
     float: left;
@@ -113,6 +105,53 @@ header{
 #imgProduct{
     text-align: center;
 
+}
+.information{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding-top: 30px;
+    padding-left: 160px;
+}
+.title-information{
+    font-family: Comic Sans MS;
+    font-size: 25px;
+    font-style: oblique;
+    color: rgb(236, 128, 164);
+    padding-bottom: 30px;
+}
+.lienhe ul li{
+    list-style: none;
+    font-size: 18px;
+    padding-bottom: 20px;
+}
+#price1{
+    text-align: center;
+    font-size: 18px;
+}
+#price2{
+    text-decoration-line: line-through;
+
+}
+#price-s{
+    color: #67000f;
+}
+#btn-delete{
+    margin-left: 100px;
+    background-color: #0073fe;
+    border: none;
+    color: white;
+    padding: 10px 10px 10px 10px;
+}
+#btn-edit{
+    margin-left: 10px;
+    padding: 10px 10px 10px 10px;
+    background-color: #0073fe;
+    border: none;
+    color: white;
+}
+.information {
+    margin-top: 200px;
+    margin-left: 200px;
 }
 
 
