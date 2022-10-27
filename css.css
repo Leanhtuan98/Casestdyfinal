@@ -17,7 +17,7 @@ header{
 }
 .inPage{
     padding-top: 30px;
-    padding-left: 160px;
+    padding-left: 150px;
 }
 .find{
     padding-top: 20px;
@@ -49,7 +49,7 @@ header{
     border-bottom-right-radius: 4px;
     color: black;
     background-color: #d9d9d9;
-    margin-top: 20px;
+    margin-top: 21px;
     margin-left: 110px;
 }
 #timkiem:hover{
@@ -79,7 +79,7 @@ header{
     color: #B3B9ECFF;
 }
 .main-right{
-    margin: 0px 300px 300px 300px;
+    margin: 0px 300px 30px 300px;
 
 
 }
@@ -96,10 +96,11 @@ header{
     /*color: green;*/
 }
 .product-item{
-    float: left;
+    /*float: left;*/
+    display: inline-block;
     padding: 5px 5px 5px 5px;
     margin-left: 50px;
-    margin-top: 45px;
+    margin-top: 50px;
     background: #ffffff;
 }
 #imgProduct{
@@ -109,14 +110,14 @@ header{
 .information{
     display: grid;
     grid-template-columns: 1fr auto;
-    padding-top: 30px;
+    padding-top: 0px;
     padding-left: 160px;
 }
 .title-information{
     font-family: Comic Sans MS;
     font-size: 25px;
     font-style: oblique;
-    color: rgb(236, 128, 164);
+    color: rgb(255, 255, 255);
     padding-bottom: 30px;
 }
 .lienhe ul li{
@@ -149,9 +150,6 @@ header{
     border: none;
     color: white;
 }
-.information {
-    margin-top: 200px;
-    margin-left: 200px;
-}
+
 
 

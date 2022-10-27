@@ -17,22 +17,21 @@ function display(arrProduct) {
     for (let i = 0; i < arrProduct.length; i++) {
         data += `
         <div class="product-item">
-         <div id="imgProduct">
-        <a href=""><img src="${arrProduct[i].image}" alt="" width="245px" height="280px"></a>
-         </div>
-         <div id="nameProduct">
-         <a href="">${arrProduct[i].name}</a>
+             <div id="imgProduct">
+                <a href=""><img src="${arrProduct[i].image}" alt="" width="240px" height="280px"></a>
+             </div>
+             <div id="nameProduct">
+                <a href="">${arrProduct[i].name}</a>
+            </div>
+            <div id="price1">
+                <span id="price1">${arrProduct[i].price} VND</span>
+                <span id="price2">${arrProduct[i].priceOld} VND</span>
+            </div>
+            <div id="btn-product">
+               <button type="submit" id="btn-edit" onclick="editProduct(${i})">Sửa</button>
+               <button type="submit" id="btn-delete" onclick="delProduct(${i})">Xóa</button>
+            </div>
         </div>
-        <div id="price1">
-        <span id="price1">${arrProduct[i].price} VND</span>
-        <span id="price2">${arrProduct[i].priceOld} VND</span>
-        </div>
-        <div id="btn-product">
-                           <button type="submit" id="btn-edit" onclick="editProduct(${i})">Sửa</button>
-                            <button type="submit" id="btn-delete" onclick="delProduct(${i})">Xóa</button>
-                         </div>
-        </div>
-        
        `
     }
     document.getElementById("displayElement").innerHTML = data;
@@ -67,7 +66,7 @@ function addProduct() {
     } else if (isNaN(priceProduct) || isNaN(priceOldProduct)) {
         check.innerHTML = "Giá sản phẩm phải là số "
     } else {
-        var product = new Product(nameProduct, priceProduct, priceOldProduct, imageProduct);
+        var product = new Product(nameProduct, priceProduct, priceOldProduct, "img/" + imageProduct);
         arrProductAll.push(product);
         display(arrProductAll);
         document.getElementById("add-product").innerHTML = ""
@@ -77,6 +76,7 @@ function addProduct() {
 function cancelAdd() {
     document.getElementById("add-product").innerHTML = ""
 }
+
 //Xóa sp
 function delProduct(index) {
     if (confirm("Bạn có muốn xóa không?")) {
@@ -84,6 +84,7 @@ function delProduct(index) {
         display(arrProductAll)
     }
 }
+
 //Sửa sản phẩm
 function editProduct(index) {
     let nameEdit = prompt("Nhập tên mới")
@@ -104,12 +105,13 @@ function editProduct(index) {
         display(arrProductAll)
     }
 }
+
 //Tìm sản phẩm
 function searchProduct() {
     let inputSearch = document.getElementById("input-find").value;
     let arrSearch = []
-    for (let i = 0 ; i<arrProductAll.length;i++){
-        if (inputSearch == arrProductAll[i].name){
+    for (let i = 0; i < arrProductAll.length; i++) {
+        if (inputSearch == arrProductAll[i].name) {
             arrSearch.push(arrProductAll[i])
         }
     }
@@ -141,4 +143,9 @@ function ChayQuangCao() {
             myIndex = 0
         }
     }, 2000);
+}
+let name= document.getElementById("name")
+function login() {
+    let x= prompt("nhập tên")
+    name.innerHTML=x
 }
