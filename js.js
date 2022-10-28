@@ -7,8 +7,7 @@ var product4 = new Product("Áo sơ mi xanh", 200000, 250000, "img/4.jpg");
 var product5 = new Product("Áo sơ mi trắng", 200000, 250000, "img/5.jpg");
 var product6 = new Product("Áo sơ mi đen", 200000, 250000, "img/6.jpg");
 
-arrProductAll = [product1, product2, product3, product4, product5, product6];
-
+let arrProductAll = [product1,product2,product3,product4,product5,product6]
 display(arrProductAll)
 
 function display(arrProduct) {
@@ -49,7 +48,6 @@ function addProductDisplay() {
                     <p id="check" style="color: red; padding: 15px 0px 0px 25px"></p>
                     <input type="submit" value="Thêm" onclick="addProduct()" id="btn-addProduct">
                      <input type="submit" value="Hủy" onclick="cancelAdd()" id="btn-cancel">
-                  
                 </div> 
     `
     document.getElementById("add-product").innerHTML = dataAdd;
@@ -69,10 +67,10 @@ function addProduct() {
         var product = new Product(nameProduct, priceProduct, priceOldProduct, "img/" + imageProduct);
         arrProductAll.push(product);
         display(arrProductAll);
+        // localStorage.setItem("product1",JSON.stringify(arrProductAll));
         document.getElementById("add-product").innerHTML = ""
     }
 }
-
 function cancelAdd() {
     document.getElementById("add-product").innerHTML = ""
 }
@@ -82,6 +80,7 @@ function delProduct(index) {
     if (confirm("Bạn có muốn xóa không?")) {
         arrProductAll.splice(index, 1);
         display(arrProductAll)
+        // localStorage.setItem("object Object",JSON.stringify(arrProductAll));
     }
 }
 
@@ -103,6 +102,7 @@ function editProduct(index) {
         arrProductAll[index].image = imageEdit
 
         display(arrProductAll)
+        // localStorage.setItem("object Object",JSON.stringify(arrProductAll));
     }
 }
 
@@ -144,8 +144,9 @@ function ChayQuangCao() {
         }
     }, 2000);
 }
+/*
 let name= document.getElementById("name")
 function login() {
     let x= prompt("nhập tên")
     name.innerHTML=x
-}
+}*/

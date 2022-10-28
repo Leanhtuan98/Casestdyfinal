@@ -12,7 +12,6 @@ class Product {
         this.image = image;
     }
 
-
     get name() {
         return this.name;
     }
@@ -45,3 +44,4 @@ class Product {
         this.image = value;
     }
 }
+// let Product = JSON.parse(localStorage.getItem("item"));

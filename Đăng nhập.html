@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Login </title>
+</head>
+<style>
+    body {
+        background-color: #38b6ff;
+        padding-top: 150px;
+        padding-left: 500px;
+
+    }
+    div {
+        background-color: lightgrey;
+        width: 300px;
+        border: 15px solid green;
+        padding: 50px;
+        margin: 20px;
+    }
+
+</style>
+<body>
+<div id="login" align = "center">
+    <h1>Đăng nhập</h1>
+    Nhập username: <input id="username" placeholder="username"> <br>
+    Nhập Password: <input id="password" placeholder="password" type="password"> <br>
+    <br>
+    <button onclick="login()">Đăng Nhập</button>
+    <button onclick="location.href= 'Register.html'">Đăng ký</button>
+</div>
+
+</body>
+</html>
+<script>
+    let accounts = JSON.parse(localStorage.getItem("accounts"));
+    if(accounts === null){
+        accounts = [];
+    }
+    function login() {
+        let username = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+        for (let i = 0; i< accounts.length; i++) {
+            if (accounts[i].username === username && accounts[i].password === password) {
+                location.href = "index.html";
+                return;
+            }
+        }
+        alert("Sai thông tin")
+    }
+</script>
